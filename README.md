@@ -105,7 +105,7 @@ for document in cursor:
 
 2. Let's run this script by using the following command `python readerino.py`.
 
-[Reading](http://i.imgur.com/NOWndVE.png)
+![Reading](http://i.imgur.com/NOWndVE.png)
 
 3. Since we have only added one entry, you'll only see one entry! Let's add another by running 
 `python insertino.py` followed by `python readerino.py`.
