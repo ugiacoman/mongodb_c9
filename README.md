@@ -10,7 +10,7 @@ and provides an easy VM workstation for testing.
 
 2. Once you're logged in create a new workstation from your dashboard.
 
-[Dashboard](http://i.imgur.com/zJcw3rx.png)
+![Dashboard](http://i.imgur.com/zJcw3rx.png)
 
 3. Name your workstation and Choose the Python template. Then click `Create Workstation`
 
@@ -20,7 +20,7 @@ and provides an easy VM workstation for testing.
 
 1. Now that we are inside of our workstation we can get started installing MongoDB.
 
-[Workstation](http://i.imgur.com/lqr0du4.png)
+![Workstation](http://i.imgur.com/lqr0du4.png)
 
 2. In the bash, we'll run `sudo pip install pymongo`. Let it install.
 
@@ -39,14 +39,14 @@ commands.
 
 2. Note that since we are in Cloud 9's VM we need to keep this terminal running, so let's open a new terminal tab inside the IDE. We'll let the first tab run mongodb and use the second tab for running scripts.
 
-[Startup](http://imgur.com/bvr474t)
+![Startup](http://imgur.com/bvr474t)
 
 #### Inserting Data
 
 1. Let's create a python script by running the following command in the bash `touch insertino.py`. After 
 running you'll see if pop up in the file manager.
 
-[Insertion](http://i.imgur.com/bvr474t.png)
+![Insertion](http://i.imgur.com/bvr474t.png)
 
 2. Let's enter the empty script and write the following:
 
@@ -105,12 +105,12 @@ for document in cursor:
 
 2. Let's run this script by using the following command `python readerino.py`.
 
-[Reading](http://i.imgur.com/NOWndVE.png)
+![Reading](http://i.imgur.com/NOWndVE.png)
 
 3. Since we have only added one entry, you'll only see one entry! Let's add another by running 
 `python insertino.py` followed by `python readerino.py`.
 
-[Readerino](http://i.imgur.com/1WG3uIG.png)
+![Readerino](http://i.imgur.com/1WG3uIG.png)
 
 4. Now we have two entries.
 
