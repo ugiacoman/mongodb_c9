@@ -6,7 +6,7 @@ and provides an easy VM workstation for testing.
 
 #### Create Cloud9 Account
 
-1. Visit [Cloud9]("https://c9.io/") and create an account.
+1. Visit [Cloud9](https://c9.io/) and create an account.
 
 2. Once you're logged in create a new workstation from your dashboard.
 
