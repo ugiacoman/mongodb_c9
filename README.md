@@ -28,13 +28,13 @@ and provides an easy VM workstation for testing.
 three commands.
 
 	```python 
-	from pymongo import MongoClient
+	>>> from pymongo import MongoClient
 	```
 	```python
-	client = MongoClient()
+	>>> client = MongoClient()
 	```
 	```python
-	client = MongoClient("mongodb://mongodb0.example.net:27019")
+	>>> client = MongoClient("mongodb://mongodb0.example.net:27019")
 	```
 
 4. Now we have a test client that we can play with. Let's exit the interpretor by running `exit()`
