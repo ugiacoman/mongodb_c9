@@ -152,7 +152,7 @@ inside:
 	"restaurant_id": "123456"
 	```
 
-2. Now let's find just that restaurant. Hint: you'll need to put a update the find() method in `readerino.py`. Find() takes in the following argument: `{"key":"value"}`.
+2. Now let's find just that new restaurant object. Hint: you'll need to update the find() method in `readerino.py`. Find() takes in the following argument: `{"key":"value"}`.
 
 3. The correct output should print only the new restaurant object. Please submit a screenshot to
 ugiacoman@email.wm.edu of both the terminal output and the `readerino.py` script.
