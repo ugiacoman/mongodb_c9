@@ -22,20 +22,26 @@ and provides an easy VM workstation for testing.
 
 	![Workstation](http://i.imgur.com/lqr0du4.png)
 
-2. In the bash, we'll run `sudo pip install pymongo`. Let it install.
+2. In the bash, we'll run `$ sudo pip install pymongo`. Let it install.
 
-3. Now let's enter the python interpretor by running `python` and set a client by running the following 
-commands.
+3. Now let's enter the python interpretor by running `$ python` and set a client by running the following 
+three commands.
 
-	* `from pymongo import MongoClient`
-	* `client = MongoClient()`
-	* `client = MongoClient("mongodb://mongodb0.example.net:27019")`
+	```python 
+	from pymongo import MongoClient
+	```
+	```python
+	client = MongoClient()
+	```
+	```python
+	client = MongoClient("mongodb://mongodb0.example.net:27019")
+	```
 
 4. Now we have a test client that we can play with. Let's exit the interpretor by running `exit()`
 
 #### Starting up MongoDB
 
-1. Let's start up mongodb first by running the following command in the bash `sudo mongod`
+1. Let's start up mongodb first by running the following command in the bash `$ sudo mongod`
 
 2. Note that since we are in Cloud 9's VM we need to keep this terminal running, so let's open a new terminal tab inside the IDE. We'll let the first tab run mongodb and use the second tab for running scripts.
 
@@ -43,8 +49,8 @@ commands.
 
 #### Inserting Data
 
-1. Let's create a python script by running the following command in the bash `touch insertino.py`. After 
-running you'll see if pop up in the file manager.
+1. Let's create a python script by running the following command in the bash `$ touch insertino.py`.
+After running you'll see if pop up in the file manager.
 
 2. Let's enter the empty script and write the following:
 
@@ -87,12 +93,12 @@ running you'll see if pop up in the file manager.
 
 	![Insertion](http://i.imgur.com/bvr474t.png)
 
-4. Let's run the script by returning to the bash and running `python insertino.py`. On success, nothing
+4. Let's run the script by returning to the bash and running `$ python insertino.py`. On success, nothing
  will print out!
 
 #### Reading Data
 
-1. Let's check the entry out by creating a reading script called `readerino.py` and write the following 
+1. Let's check the entry out by creating a reading script called `$ readerino.py` and write the following 
 inside:
 
 	```python
@@ -106,12 +112,12 @@ inside:
 	for document in cursor:
 	    print(document)
 	```
-2. Let's run this script by using the following command `python readerino.py`.
+2. Let's run this script by using the following command `$ python readerino.py`.
 
 	![Reading](http://i.imgur.com/NOWndVE.png)
 
 3. Since we have only added one entry, you'll only see one entry! Let's add another by running 
-`python insertino.py` followed by `python readerino.py`. Now we have two entries.
+`$ python insertino.py` followed by `$ python readerino.py`. Now we have two entries.
 
 	![Readerino](http://i.imgur.com/1WG3uIG.png)
 
