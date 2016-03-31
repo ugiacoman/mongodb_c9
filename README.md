@@ -39,7 +39,7 @@ commands.
 
 2. Note that since we are in Cloud 9's VM we need to keep this terminal running, so let's open a new terminal tab inside the IDE. We'll let the first tab run mongodb and use the second tab for running scripts.
 
-![Startup](http://i.imgur.com/DQXhLdA.png)
+	![Startup](http://i.imgur.com/DQXhLdA.png)
 
 #### Inserting Data
 
