@@ -98,7 +98,7 @@ After running you'll see if pop up in the file manager.
 
 #### Reading Data
 
-1. Let's check the entry out by creating a reading script called `$ readerino.py` and write the following 
+1. Let's check the entry out by creating a reading script called `readerino.py` and write the following 
 inside:
 
 	```python
