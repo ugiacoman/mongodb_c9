@@ -48,40 +48,40 @@ running you'll see if pop up in the file manager.
 
 2. Let's enter the empty script and write the following:
 
-```python
-from pymongo import MongoClient
-from datetime import datetime
+	```python
+	from pymongo import MongoClient
+	from datetime import datetime
 
-client = MongoClient()
-db = client.test
+	client = MongoClient()
+	db = client.test
 
-result = db.restaurants.insert_one(
-    {
-        "address": {
-            "street": "2 Avenue",
-            "zipcode": "10075",
-            "building": "1480",
-            "coord": [-73.9557413, 40.7720266]
-        },
-        "borough": "Manhattan",
-        "cuisine": "Italian",
-        "grades": [
-            {
-                "date": datetime.strptime("2014-10-01", "%Y-%m-%d"),
-                "grade": "A",
-                "score": 11
-            },
-            {
-                "date": datetime.strptime("2014-01-16", "%Y-%m-%d"),
-                "grade": "B",
-                "score": 17
-            }
-        ],
-        "name": "Vella",
-        "restaurant_id": "41704620"
-    }
-)
-```
+	result = db.restaurants.insert_one(
+	    {
+	        "address": {
+	            "street": "2 Avenue",
+	            "zipcode": "10075",
+	            "building": "1480",
+	            "coord": [-73.9557413, 40.7720266]
+	        },
+	        "borough": "Manhattan",
+	        "cuisine": "Italian",
+	        "grades": [
+	            {
+	                "date": datetime.strptime("2014-10-01", "%Y-%m-%d"),
+	                "grade": "A",
+	                "score": 11
+	            },
+	            {
+	                "date": datetime.strptime("2014-01-16", "%Y-%m-%d"),
+	                "grade": "B",
+	                "score": 17
+	            }
+	        ],
+	        "name": "Vella",
+	        "restaurant_id": "41704620"
+	    }
+	)
+	```
 
 3. This script is going to insert a restaurant object into our database.
 
@@ -95,17 +95,17 @@ result = db.restaurants.insert_one(
 1. Let's check the entry out by creating a reading script called `readerino.py` and write the following 
 inside:
 
-```python
-from pymongo import MongoClient
+	```python
+	from pymongo import MongoClient
 
-client = MongoClient()
-db = client.test
+	client = MongoClient()
+	db = client.test
 
-cursor = db.restaurants.find()
+	cursor = db.restaurants.find()
 
-for document in cursor:
-    print(document)
-```
+	for document in cursor:
+	    print(document)
+	```
 2. Let's run this script by using the following command `python readerino.py`.
 
 ![Reading](http://i.imgur.com/NOWndVE.png)
@@ -121,30 +121,30 @@ for document in cursor:
 
 1. Let's create a a restaurant object with the following attributes:
 
-```python
-"address": {
-    "street": "123 Richmond Rd",
-    "zipcode": "23185",
-    "building": "1",
-    "coord": [99.9999999, 99.9999999]
-},
-"borough": "Burg",
-"cuisine": "The Good Stuff",
-"grades": [
-    {
-        "date": datetime.strptime("2015-09-01", "%Y-%m-%d"),
-        "grade": "A",
-        "score": 11
-    },
-    {
-        "date": datetime.strptime("2013-01-16", "%Y-%m-%d"),
-        "grade": "B",
-        "score": 17
-    }
-],
-"name": "Burgos",
-"restaurant_id": "123456"
-```
+	```python
+	"address": {
+	    "street": "123 Richmond Rd",
+	    "zipcode": "23185",
+	    "building": "1",
+	    "coord": [99.9999999, 99.9999999]
+	},
+	"borough": "Burg",
+	"cuisine": "The Good Stuff",
+	"grades": [
+	    {
+	        "date": datetime.strptime("2015-09-01", "%Y-%m-%d"),
+	        "grade": "A",
+	        "score": 11
+	    },
+	    {
+	        "date": datetime.strptime("2013-01-16", "%Y-%m-%d"),
+	        "grade": "B",
+	        "score": 17
+	    }
+	],
+	"name": "Burgos",
+	"restaurant_id": "123456"
+	```
 
 2. Now let's find just that restaurant. Hint: you'll need to put a update the find() method in `readerino.py`. Find() takes in the following argument: `{"key":"value"}`.
 
