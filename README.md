@@ -121,6 +121,60 @@ inside:
 
 	![Readerino](http://i.imgur.com/1WG3uIG.png)
 
+#### Updating Data
+
+1. Let's update Vella's restaurant. Using `restaurant_id`, we can call it and update a 
+specific paramater. Let's create another script called `updaterino.py` and fill
+it out with the following code. 
+
+	```python
+	from pymongo import MongoClient
+
+	client = MongoClient()
+	db = client.test
+
+	result = db.restaurants.update_one(
+	    {"restaurant_id": "41704620"},
+	    {"$set": {"address.street": "1210 New Address"}}
+	)	
+
+	cursor = db.restaurants.find()
+
+	for document in cursor:
+	    print(document)
+	```
+
+2. This will find the first object with `restaurant_id = 41704620` and print out all the results
+in the database. To update all objects use `update_many` instead of `update_one`.
+
+#### Deleting Data
+
+1. Let's delete all restaurant objects in Manhattan.
+
+	```python
+	from pymongo import MongoClient
+
+	client = MongoClient()
+	db = client.test
+
+	result = db.restaurants.delete_many({"borough": "Manhattan"})
+
+	cursor = db.restaurants.find()
+
+	for document in cursor:
+	    print(document)
+	```
+
+2. Similarly to `update_many`, `delete_many` will delete all objects matching it's criteria. 
+
+#### Sharding and Replicas
+
+1. One of the reasons to use MongoDB is because of how it holds data and the ease of sharding. 
+Sharding is a type of database partitioning that separates large databases the into smaller, faster,
+parts called data shards. It is difficult to simulate the benefit of sharding on a small test database,
+but creating data shards in MongoDB is easy! For more information on how to shard visit 
+[here](https://docs.mongodb.org/manual/tutorial/deploy-shard-cluster/).
+
 
 
 #### Your Turn
@@ -154,7 +208,6 @@ inside:
 
 2. Now let's find just that new restaurant object. Hint: you'll need to update the find() method in `readerino.py`. Find() takes in the following argument: `{"key":"value"}`.
 
-3. The correct output should print only the new restaurant object. Please submit a screenshot to
-ugiacoman@email.wm.edu of both the terminal output and the `readerino.py` script.
+3. Please submit a screenshot to ugiacoman@email.wm.edu of both the terminal output and the `readerino.py script.
 
 
